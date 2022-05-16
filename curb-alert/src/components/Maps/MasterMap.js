@@ -15,6 +15,7 @@ export default function MasterMap() {
 
 
 
+
     const center = useMemo(() => ({ lat: 41.43, lng: -81.7 }), []);
 
     const { isLoaded } = useJsApiLoader({
@@ -31,7 +32,7 @@ export default function MasterMap() {
         <GoogleMap zoom={10} center={center} mapContainerClassName="master-map-container">
 
 
-            < Marker center={center} ></Marker>
+            < Marker position={{ lat: (parseFloat(posts[0].itemLat)), lng: (parseFloat(posts[0].itemLng)) }} ></Marker>
 
 
         </GoogleMap >
