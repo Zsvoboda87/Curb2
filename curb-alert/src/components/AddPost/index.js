@@ -103,7 +103,7 @@ const AddPost = (props) => {
 
         try {
             await addPost({
-                variables: { itemTitle, itemDescription, imageURL: imageUrlData.url, itemCategory, itemLat: `${props.globalState.mapCenter.lat}`, itemLng: `${props.globalState.mapCenter.lng}` }
+                variables: { itemTitle, itemDescription, imageURL: imageUrlData.url, itemCategory, itemLat: props.globalState.mapCenter.lat, itemLng: props.globalState.mapCenter.lng }
             });
         } catch (e) {
             console.error(e);
