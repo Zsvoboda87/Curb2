@@ -1,0 +1,36 @@
+{
+  "name": "curb-alert",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd curb-alert && npm start\"",
+    "install": "cd server && npm i && cd ../curb-alert && npm i",
+    "build": "cd curb-alert && npm run build"
+  },
+  "engines": {
+    "node": "16.13.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zsvoboda87/Curb-Alert.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zsvoboda87/Curb-Alert/issues"
+  },
+  "homepage": "https://github.com/Zsvoboda87/Curb-Alert",
+  "devDependencies": {
+    "concurrently": "^7.1.0"
+  },
+  "dependencies": {
+    "google-maps-react": "^2.0.6",
+    "react-globally": "^1.1.0",
+    "react-paginate": "^8.1.3",
+    "react-places-autocomplete": "^7.3.0",
+    "react-router-dom": "^5.3.1"
+  }
+}
