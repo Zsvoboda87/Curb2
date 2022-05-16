@@ -11,6 +11,7 @@ import ReactPaginate from "react-paginate";
 function Feed() {
     const { loading, data } = useQuery(QUERY_POSTS);
     const posts = data?.posts || [];
+    console.log(posts)
 
     const [categoryChange, handleCategoryChange] = useState('');
 

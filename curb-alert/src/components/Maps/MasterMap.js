@@ -13,9 +13,6 @@ export default function MasterMap() {
     const { loading, data } = useQuery(QUERY_POSTS);
     const posts = data?.posts || [];
 
-
-
-
     const center = useMemo(() => ({ lat: 41.43, lng: -81.7 }), []);
 
     const { isLoaded } = useJsApiLoader({
@@ -27,14 +24,15 @@ export default function MasterMap() {
         return <div>Loading...</div>;
     }
 
+
+
     if (!isLoaded) return <div>Loading...</div>;
     return (
         <GoogleMap zoom={10} center={center} mapContainerClassName="master-map-container">
+            {/* {posts.map(post => ( */}
+            < Marker position={{ lat: posts[0].itemLat, lng: posts[0].itemLng }} ></Marker>
 
-
-            < Marker position={center} ></Marker>
-
-
+            {/* ))} */}
         </GoogleMap >
     );
 

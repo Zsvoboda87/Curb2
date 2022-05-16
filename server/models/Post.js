@@ -82,10 +82,10 @@ const postSchema = new Schema(
       type: String
     },
     itemLat: {
-      type: String
+      type: Number
     },
     itemLng: {
-      type: String
+      type: Number
     },
     createdAt: {
       type: Date,

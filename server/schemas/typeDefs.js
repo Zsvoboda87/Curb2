@@ -19,8 +19,8 @@ const typeDefs = gql`
     itemDescription: String!
     imageURL: String
     itemCategory: String
-    itemLat: String
-    itemLng: String
+    itemLat: Float
+    itemLng: Float
     createdAt: String
     username: String
     comments: [Comment]
@@ -47,7 +47,7 @@ const typeDefs = gql`
     
     updateProfile( userImage: String, userDescription: String): User
     
-    addPost(itemTitle: String!, itemDescription: String!, imageURL: String, itemCategory:String, itemLat: String, itemLng: String): Post
+    addPost(itemTitle: String!, itemDescription: String!, imageURL: String, itemCategory:String, itemLat: Float, itemLng: Float): Post
     removePost(_id: String): User
     
     addComment(postId: ID!, commentBody: String!): Post
