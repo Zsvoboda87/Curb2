@@ -19,7 +19,7 @@ export default function MasterMap() {
     const center = useMemo(() => ({ lat: 41.43, lng: -81.7 }), []);
 
     const { isLoaded } = useJsApiLoader({
-        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+        googleMapsApiKey: "AIzaSyBuE6oMF0YMNhz2ZtJ_dSgasypV9uPBgxg",
 
     })
 
