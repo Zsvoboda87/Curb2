@@ -32,7 +32,7 @@ export default function MasterMap() {
         <GoogleMap zoom={10} center={center} mapContainerClassName="master-map-container">
 
 
-            < Marker position={{ lat: (parseFloat(posts[0].itemLat)), lng: (parseFloat(posts[0].itemLng)) }} ></Marker>
+            < Marker position={center} ></Marker>
 
 
         </GoogleMap >
